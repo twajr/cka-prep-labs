@@ -5,9 +5,16 @@ Kube-dns is a (kube-system) pod containing three container instances: kubedns, d
 Kubernetes master is running at https://api.k8s.myhost.net
 KubeDNS is running at https://api.k8s.myhost.net/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
 ```
+Verify another way:
+```
+kubectl get pods --namespace=kube-system -l k8s-app=kube-dns
+```
 To have a look at the logs of each container do this:
 ```
 kubectl logs kube-dns-xxxx -n kube-system -c kubedns
+NAME                        READY     STATUS    RESTARTS   AGE
+kube-dns-7f56f9f8c7-9xcqt   3/3       Running   0          1h
+kube-dns-7f56f9f8c7-c426r   3/3       Running   0          1h
 ```
 You specify the -c to grab the logs of a specfic container instance inside the pod.
 ## What is Kubernetes DNS
