@@ -1,5 +1,11 @@
 # kube-dns notes
-Kube-dns is a (kube-system) pod containing three container instances: kubedns, dnsmasq, and sidecar. To have a look at the logs of each container do this:
+Kube-dns is a (kube-system) pod containing three container instances: kubedns, dnsmasq, and sidecar. This service is instrumental for kubernetes to function. Cluster-info shows the primary dns endpoint.
+```
+[root@1716bb9df96b ~]# kubectl cluster-info
+Kubernetes master is running at https://api.k8s.myhost.net
+KubeDNS is running at https://api.k8s.myhost.net/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+```
+To have a look at the logs of each container do this:
 ```
 kubectl logs kube-dns-xxxx -n kube-system -c kubedns
 ```
