@@ -1,10 +1,9 @@
 # kube-dns notes
-Kube-dns is a pod that contains three container instances: kubedns, dnsmasq, and sidecar. To have a look at the logs of each container do this:
+Kube-dns is a (kube-system) pod containing three container instances: kubedns, dnsmasq, and sidecar. To have a look at the logs of each container do this:
 ```
 kubectl logs kube-dns-xxxx -n kube-system -c kubedns
 ```
 You specify the -c to grab the logs of a specfic container instance inside the pod.
-
 ## What is Kubernetes DNS
 The kube-dns pod basically watches the API server for Pods and Services that spin up. It uses SkyDNS to then serve up queries to those pods an services. It also uses DNSMasq to caching these requests. When a pods spins up, the kube-dns overrides their local /etc/resolv.conf files so that they point only to the proxy. 
 
