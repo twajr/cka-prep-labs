@@ -18,7 +18,8 @@ nameserver 100.64.0.10
 search default.svc.cluster.local svc.cluster.local cluster.local google.internal
 options ndots:5
 ```
-Checking if DNS is actually working:
+### Checking if DNS is actually working:
+Assumes the existence of basic nginx and busybox deployments.
 ```
 kubectl exec -ti busybox -- nslookup nginx
 Server:    100.64.0.10
