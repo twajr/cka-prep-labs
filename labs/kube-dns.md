@@ -18,3 +18,12 @@ nameserver 100.64.0.10
 search default.svc.cluster.local svc.cluster.local cluster.local google.internal
 options ndots:5
 ```
+Checking if DNS is actually working:
+```
+kubectl exec -ti busybox -- nslookup nginx
+Server:    100.64.0.10
+Address 1: 100.64.0.10 kube-dns.kube-system.svc.cluster.local
+
+Name:      nginx
+Address 1: 100.67.79.160 nginx.default.svc.cluster.local
+```
