@@ -5,10 +5,10 @@ kubectl logs kube-dns-xxxx -n kube-system -c kubedns
 ```
 You specify the -c to grab the logs of a specfic container instance inside the pod.
 
-## What is Kubernets DNS
+## What is Kubernetes DNS
 The kube-dns pod basically watches the API server for Pods and Services that spin up. It uses SkyDNS to then serve up queries to those pods an services. It also uses DNSMasq to caching these requests. When a pods spins up, the kube-dns overrides their local /etc/resolv.conf files so that they point only to the proxy. 
 
-## Investigation Kube-DNS Pod
+## Investigating kube-dns pod and resolv.conf
 ```
 [root@1716bb9df96b ~]# kubectl get svc kube-dns -n kube-system
 NAME       TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)         AGE
