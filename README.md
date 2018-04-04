@@ -13,7 +13,7 @@ Installing the dashboard after cluster creation
 kubectl create -f https://raw.githubusercontent.com/kubernetes/kops/master/addons/kubernetes-dashboard/v1.8.1.yaml
 ```
 ### Adding the EFK Stack
-Installing the EFK stack after cluster creation
+Installing the EFK stack after cluster creation. This requires a PV setup prior to launch. (Need to document)
 ```
 kubectl create -f https://raw.githubusercontent.com/kubernetes/kops/master/addons/logging-elasticsearch/v1.6.0.yaml
 ```
