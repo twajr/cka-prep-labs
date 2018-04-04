@@ -26,6 +26,10 @@ kops edit ig --name=k8s.twajr.net nodes
     maxSize: 1
     minSize: 1
 ```
+### Spin up the cluster
+```
+kops update cluster k8s.twajr.net --yes
+```
 ### Adding the Dashboard
 Installing the dashboard after cluster creation
 ```
