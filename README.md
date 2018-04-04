@@ -85,5 +85,11 @@ spec:
           servicePort: 80
 ```
 It works:
-
+```
+kubectl apply -f ingress.haml
+...
+kubectl get ingress
+NAME      HOSTS                                 ADDRESS         PORTS     AGE
+echomap   api.k8s.twajr.net,api.k8s.twajr.net   35.226.210.77   80        43m
+```
 ![Ingress](images/ingress-example.PNG)
