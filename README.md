@@ -46,7 +46,42 @@ Installing the EFK stack after cluster creation. This requires a PV setup prior 
 kubectl create -f https://raw.githubusercontent.com/kubernetes/kops/master/addons/logging-elasticsearch/v1.6.0.yaml
 ```
 ### Adding the Ingress-Nginx Controller
-Installing the ingres-nginx controller is a bit complicated, but it works. 
-Doc is here:
+Installing the ingres-nginx controller is a bit complicated, but it works. Doc:
+
 [Ingress-Nginx Install Guide](https://github.com/kubernetes/ingress-nginx/tree/master/deploy)
+Sample app that echos headers:
+```
+kubectl run echoheaders --image=k8s.gcr.io/echoserver:1.4 --replicas=1 --port=8080
+kubectl expose deployment echoheaders --port=80 --target-port=8080 --name=echoheaders-x
+kubectl expose deployment echoheaders --port=80 --target-port=8080 --name=echoheaders-y
+```
+The sample ingress for above deployments.
+```
+# An Ingress with 2 hosts and 3 endpoints
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: echomap
+spec:
+  rules:
+  - host: api.k8s.twajr.net
+    http:
+      paths:
+      - path: /foo
+        backend:
+          serviceName: echoheaders-x
+          servicePort: 80
+  - host: api.k8s.twajr.net
+    http:
+      paths:
+      - path: /bar
+        backend:
+          serviceName: echoheaders-y
+          servicePort: 80
+      - path: /foo
+        backend:
+          serviceName: echoheaders-x
+          servicePort: 80
+```
+
 ![Ingress](images/ingress-example.PNG)
