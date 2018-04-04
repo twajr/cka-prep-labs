@@ -10,7 +10,12 @@ The labs described here run with Kubernetes on GCP using the KOPS tool. Herein a
 ### Adding the Dashboard
 Installing the dashboard after cluster creation
 ```
-$kubectl create -f https://raw.githubusercontent.com/kubernetes/kops/master/addons/kubernetes-dashboard/v1.8.1.yaml
+kubectl create -f https://raw.githubusercontent.com/kubernetes/kops/master/addons/kubernetes-dashboard/v1.8.1.yaml
+```
+### Adding the EFK Stack
+Installing the EFK stack after cluster creation
+```
+kubectl create -f https://raw.githubusercontent.com/kubernetes/kops/master/addons/logging-elasticsearch/v1.6.0.yaml
 ```
 
 ### Getting dashboard credentials
