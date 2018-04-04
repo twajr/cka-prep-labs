@@ -49,4 +49,4 @@ kubectl create -f https://raw.githubusercontent.com/kubernetes/kops/master/addon
 Installing the ingres-nginx controller is a bit complicated, but it works. 
 Doc is here:
 [Ingress-Nginx Install Guide](https://github.com/kubernetes/ingress-nginx/tree/master/deploy)
-
+![Ingress](images/ingress-example.PNG)
