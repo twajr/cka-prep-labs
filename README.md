@@ -12,18 +12,19 @@ Installing the dashboard after cluster creation
 ```
 kubectl create -f https://raw.githubusercontent.com/kubernetes/kops/master/addons/kubernetes-dashboard/v1.8.1.yaml
 ```
-### Adding the EFK Stack
-Installing the EFK stack after cluster creation. This requires a PV setup prior to launch. (Need to document)
-```
-kubectl create -f https://raw.githubusercontent.com/kubernetes/kops/master/addons/logging-elasticsearch/v1.6.0.yaml
-```
-### Adding the Ingress-Nginx 
-Installing the EFK stack after cluster creation. This requires a PV setup prior to launch. (Need to document)
-```
-kubectl create -f https://raw.githubusercontent.com/kubernetes/kops/master/addons/ingress-nginx/v1.6.0-gce.yaml
-```
 ### Getting dashboard credentials
 ```
 $kops get secrets kube --type secret -oplaintext     # bearer token needed on first UI login
 $kops get secrets admin --type secret -oplaintext    # admin login password
 ```
+### Adding the EFK Stack
+Installing the EFK stack after cluster creation. This requires a PV setup prior to launch. (Need to document)
+```
+kubectl create -f https://raw.githubusercontent.com/kubernetes/kops/master/addons/logging-elasticsearch/v1.6.0.yaml
+```
+### Adding the Ingress-Nginx Controller
+Installing the EFK stack after cluster creation. This requires a PV setup prior to launch. (Need to document)
+```
+kubectl create -f https://raw.githubusercontent.com/kubernetes/kops/master/addons/ingress-nginx/v1.6.0-gce.yaml
+```
+
