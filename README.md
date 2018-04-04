@@ -49,13 +49,14 @@ kubectl create -f https://raw.githubusercontent.com/kubernetes/kops/master/addon
 Installing the ingres-nginx controller is a bit complicated, but it works. Doc:
 
 [Ingress-Nginx Install Guide](https://github.com/kubernetes/ingress-nginx/tree/master/deploy)
+
 Sample app that echos headers:
 ```
 kubectl run echoheaders --image=k8s.gcr.io/echoserver:1.4 --replicas=1 --port=8080
 kubectl expose deployment echoheaders --port=80 --target-port=8080 --name=echoheaders-x
 kubectl expose deployment echoheaders --port=80 --target-port=8080 --name=echoheaders-y
 ```
-The sample ingress for above deployments.
+The sample ingress.yaml for above deployments.
 ```
 # An Ingress with 2 hosts and 3 endpoints
 apiVersion: extensions/v1beta1
@@ -83,5 +84,6 @@ spec:
           serviceName: echoheaders-x
           servicePort: 80
 ```
+It works:
 
 ![Ingress](images/ingress-example.PNG)
