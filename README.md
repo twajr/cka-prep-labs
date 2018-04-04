@@ -46,8 +46,7 @@ Installing the EFK stack after cluster creation. This requires a PV setup prior 
 kubectl create -f https://raw.githubusercontent.com/kubernetes/kops/master/addons/logging-elasticsearch/v1.6.0.yaml
 ```
 ### Adding the Ingress-Nginx Controller
-Installing the EFK stack after cluster creation. This requires a PV setup prior to launch. (Need to document)
-```
-kubectl create -f https://raw.githubusercontent.com/kubernetes/kops/master/addons/ingress-nginx/v1.6.0-gce.yaml
-```
+Installing the ingres-nginx controller is a bit complicated, but it works. 
+Doc is here:
+[Ingress-Nginx Install Guide](https://github.com/kubernetes/ingress-nginx/tree/master/deploy)
 
