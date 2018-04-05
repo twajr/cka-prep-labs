@@ -5,7 +5,7 @@ Labs to help prepare for the Certified Kubernetes Administrator (CKA) Exam
 Version: 1.9.1
 
 ## Kops on GCE Setup / Notes
-The labs described here run with Kubernetes on GCP using the KOPS tool. Herein are notes for creation and setup, etc.
+The labs described here run with Kubernetes on GCE using the KOPS tool. Herein are notes for creation and setup, etc.
 
 [Getting Started with Kops on GCE](https://github.com/kubernetes/kops/blob/master/docs/tutorial/gce.md)
 ### Setup
@@ -28,7 +28,7 @@ kops edit ig --name=k8s.twajr.net nodes
     maxSize: 1
     minSize: 1
 ```
-Notice the image defaults to Google's optomized container image, others also work.
+Notice the image defaults to Google's optomized container image, others may also work.
 ### Spin up the cluster
 ```
 kops update cluster k8s.twajr.net --yes
