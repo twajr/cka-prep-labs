@@ -33,6 +33,10 @@ Notice the image defaults to Google's optomized container image, others may also
 ```
 kops update cluster k8s.twajr.net --yes
 ```
+### Delete the cluster
+```
+kops delete cluster --name=k8s.twajr.net --yes
+```
 ### Adding the Dashboard
 Installing the dashboard after cluster creation
 ```
