@@ -26,6 +26,7 @@ kops edit ig --name=k8s.twajr.net nodes
     maxSize: 1
     minSize: 1
 ```
+Notice the image defaults to Google's optomized container image, others also work.
 ### Spin up the cluster
 ```
 kops update cluster k8s.twajr.net --yes
