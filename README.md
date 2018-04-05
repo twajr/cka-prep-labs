@@ -4,8 +4,10 @@ Labs to help prepare for the Certified Kubernetes Administrator (CKA) Exam
 ## Current Kubernetes Version
 Version: 1.9.1
 
-## Kops on GCP Setup / Notes
+## Kops on GCE Setup / Notes
 The labs described here run with Kubernetes on GCP using the KOPS tool. Herein are notes for creation and setup, etc.
+
+[Getting Started with Kops on GCE](https://github.com/kubernetes/kops/blob/master/docs/tutorial/gce.md)
 ### Setup
 ```
 PROJECT=`gcloud config get-value project`
