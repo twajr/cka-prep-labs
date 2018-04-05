@@ -37,6 +37,9 @@ kops update cluster k8s.twajr.net --yes
 ```
 kops delete cluster --name=k8s.twajr.net --yes
 ```
+### CNI Networking
+[Networking with CNI and Kops](https://github.com/kubernetes/kops/blob/master/docs/networking.md)
+
 ### Adding the Dashboard
 Installing the dashboard after cluster creation
 ```
