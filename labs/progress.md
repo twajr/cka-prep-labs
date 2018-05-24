@@ -47,3 +47,13 @@ The list below is based on the curriculum 1.9
   - [ ] Monitoring Applications
   - [ ] Manage component logs
   - [ ] Manage application logs
+- [ ] Networking
+  - [ ] Networking configuration for cluster nodes
+  - [ ] Pod networking concepts
+  - [ ] Understand Service Networking
+  - [ ] Deploy and configure load balancers
+  - [ ] How to use ingress rules
+  - [ ] Configure and user cluster DNS
+  - [ ] Understand CNI
+- [ ] Installation, Configuration and Validation
+  - [ ] Design a cluster
