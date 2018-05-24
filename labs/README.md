@@ -8,40 +8,18 @@ What I've tried to do is follow through the Kubernetes.io 'tasks' list and eithe
 ALSO, I have ordered the labs in what I think is an order of importance / relevance...
 
 My goal is to have a way to really 'practice' for the exam on my Raspberry Pi cluster. It is a small cluster that I can carry with me to work and has one master and two worker nodes. 
-
-## Current Progress
+### Progress
 - [x] Basics
   - [x] Kubectl
-- [ ] Core Concepts
-  - [ ] API Primitives
-  - [ ] Cluster Architecture
-  - [ ] Services and Network Primitives
 - [ ] Cluster Management
 - [ ] Pods and Containers
 - [ ] Storage
-  - [ ] Persistent Volumes
-  - [ ] Access Modes
-  - [ ] PVC Primitives
-  - [ ] Storage Objects
-  - [ ] Configuration Apps with Storage
 - [ ] Security
-  - [ ] Configure AuthN / AuthZ
-  - [ ] Security Primitives
-  - [ ] Configure Network Policies
-  - [ ] Create / Manage TLS Certs
-  - [ ] Secure Images
-  - [ ] Security Contexts
-  - [ ] Secure Etcd
-  - [ ] Work with RBAC options
 - [ ] Networking
 - [x] Namespaces
 - [ ] DNS
 - [ ] Quotas
 - [ ] Troubleshooting
-  - [ ] Application Failure
-  - [ ] Control Plan Failure
-  - [ ] Worker Node Failure
-  - [ ] Networking Issues
 - [ ] Monitoring, Logging, and Debugging
 
 ## Kubectl

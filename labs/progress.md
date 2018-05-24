@@ -1,0 +1,49 @@
+# Current Progress
+The list below is based on the curriculum 1.9
+
+- [ ] Core Concepts
+  - [ ] API Primitives
+  - [ ] Cluster Architecture
+  - [ ] Services and Network Primitives
+- [ ] Scheduling
+  - [ ] Label Selectors
+  - [ ] Deamon Sets
+  - [ ] Resource Limits Effect
+  - [ ] Multiple Schedulers
+  - [ ] Manually Scheduling Pods
+  - [ ] Display Scheduler Events
+  - [ ] Configure K8s Scheduler 
+- [ ] Cluster Maintenance
+  - [ ] Upgrade process
+  - [ ] Facilitate OS upgrades
+  - [ ] Backup and Restore methodologies
+- [ ] Storage
+  - [ ] Persistent Volumes
+  - [ ] Access Modes
+  - [ ] PVC Primitives
+  - [ ] Storage Objects
+  - [ ] Configuration Apps with Storage
+- [ ] Security
+  - [ ] Configure AuthN / AuthZ
+  - [ ] Security Primitives
+  - [ ] Configure Network Policies
+  - [ ] Create / Manage TLS Certs
+  - [ ] Secure Images
+  - [ ] Security Contexts
+  - [ ] Secure Etcd
+  - [ ] Work with RBAC options
+- [ ] Application Lifecycle Management
+  - [ ] Understand deployments / rolling updates and rollbacks
+  - [ ] Configuring applications
+  - [ ] How to scale applications
+  - [ ] Primitives used for self-healing applications
+- [ ] Troubleshooting
+  - [ ] Application Failure
+  - [ ] Control Plan Failure
+  - [ ] Worker Node Failure
+  - [ ] Networking Issues
+- [ ] Monitoring, Logging, and Debugging
+  - [ ] Monitoring of all cluster components
+  - [ ] Monitoring Applications
+  - [ ] Manage component logs
+  - [ ] Manage application logs
