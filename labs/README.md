@@ -18,12 +18,32 @@ Use of the kubectl proxy to experiment with the API is easy and instructional.
 ### Kubectl Exec
 kubectl exec is nearly the same as Docker Exec and allows you to connect to other nodes, pods, and services. 
 
+### Cluster Management
+This tasks includes node reboots, upgrades, resizing, etc. 
+#### Rebooting a Node (drain)
+Given pods are typically replicated on several nodes, there's no need to worry about a specific node reboot as they will be restarted by kubectl on restart. However, to be specific about it, you can use drain to gracefully terminate pods before a reboot as well as ensuring new pods are not scheduled there. 
+```
+    kubectl drain mynode
+    kubectl uncordon mynode
+```
+The uncordon command reenables scheduling. 
+
 ### Extended Node Resources
 You can add user-defined 'resources' to your K8s nodes with the HTTP PATCH request. This is really pretty neat and shows out extendable K8s is. 
 [Extended Node Resources](https://kubernetes.io/docs/tasks/administer-cluster/extended-resource-node/)
 
 ### Services
 
+
+### Configuring 'Out Of Resource' Handling
+I imagine this will be on the exam too, good walk-thru. 
+[Configure Out of Resource Handling](https://kubernetes.io/docs/tasks/administer-cluster/out-of-resource/)
+
+
+
+### Configuring Multiple Schedulers
+This is probably on the exam, and this provides a good walk-thru.
+[A Custom Scheduler](https://kubernetes.io/docs/tasks/administer-cluster/configure-multiple-schedulers/)
 
 
 
@@ -33,3 +53,7 @@ This is an example of using node parameters to auto scale resources, such as the
 
 ### Reclaim Policy for PVs
 [Changing the Reclaim Policy](https://kubernetes.io/docs/tasks/administer-cluster/change-pv-reclaim-policy/)
+
+### Change Default Storage Class
+[Chaning the default storage class](https://kubernetes.io/docs/tasks/administer-cluster/change-default-storage-class/)
+
