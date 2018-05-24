@@ -9,6 +9,19 @@ ALSO, I have ordered the labs in what I think is an order of importance / releva
 
 My goal is to have a way to really 'practice' for the exam on my Raspberry Pi cluster. It is a small cluster that I can carry with me to work and has one master and two worker nodes. 
 
+## Current Progress
+- [ ] Concepts
+- [x] Kubectl
+- [ ] Cluster Management
+- [ ] Pods and Containers
+- [ ] Storage
+- [ ] Security
+- [ ] Networking
+- [x] Namespaces
+- [ ] DNS
+- [ ] Quotas
+- [ ] Monitoring, Logging, and Debugging
+
 ## Kubectl
 We first need a cluster and kubectl. To ensure kubectl is installed, read through the following:
 [Install Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
@@ -19,8 +32,6 @@ Use of the kubectl proxy to experiment with the API is easy and instructional.
 kubectl exec is nearly the same as Docker Exec and allows you to connect to other nodes, pods, and services. 
 
 ## Cluster Management
-This tasks includes node reboots, upgrades, resizing, etc. 
-
 ### Rebooting a Node (drain)
 Given pods are typically replicated on several nodes, there's no need to worry about a specific node reboot as they will be restarted by kubectl on restart. However, to be specific about it, you can use drain to gracefully terminate pods before a reboot as well as ensuring new pods are not scheduled there. 
 ```
@@ -44,7 +55,6 @@ Better to use Daemon sets today
 ## Services
 
 ## Security
-The various security aspects of a K8s cluster. 
 ### [Securing a Cluster](https://kubernetes.io/docs/tasks/administer-cluster/securing-a-cluster/)
 ### [Managing Sysctls](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/)
 Sysctls can be disabled or enabled explicitly
@@ -66,7 +76,6 @@ Sysctls can be disabled or enabled explicitly
 [Operating Etcd](https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/)
 
 ## DNS
-This section covers all we know about K8s and DNS
 ### Customizing DNS Services
 Lots of options...
 [Customizing DNS Nameservers](https://kubernetes.io/docs/tasks/administer-cluster/dns-custom-nameservers/)
@@ -130,7 +139,7 @@ As of 1.9, PVCs that are active can be protected from removal.
 [Changing the Reclaim Policy](https://kubernetes.io/docs/tasks/administer-cluster/change-pv-reclaim-policy/)
 
 ### Change Default Storage Class
-[Chaning the default storage class](https://kubernetes.io/docs/tasks/administer-cluster/change-default-storage-class/)
+[Changing the default storage class](https://kubernetes.io/docs/tasks/administer-cluster/change-default-storage-class/)
 
 ## Kubeadm
 
