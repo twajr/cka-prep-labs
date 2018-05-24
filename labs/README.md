@@ -34,7 +34,31 @@ You can add user-defined 'resources' to your K8s nodes with the HTTP PATCH reque
 
 ### Services
 
+## DNS
+This section covers all we know about K8s and DNS
+### Customizing DNS Services
+Lots of options...
+[Customizing DNS Nameservers](https://kubernetes.io/docs/tasks/administer-cluster/dns-custom-nameservers/)
+### Debugging DNS Resolution
+[Debugging DNS](https://kubernetes.io/docs/tasks/administer-cluster/dns-debugging-resolution/)
+### Autoscaling DNS Service
+This is an example of using node parameters to auto scale resources, such as the DNS service in this example.
+[DNS Autoscaling](https://kubernetes.io/docs/tasks/administer-cluster/dns-horizontal-autoscaling/)
 
+
+### Configure Quotas for API Objects
+Quotas are used to restrict the number of items that can be created. It would be nice to have a list of actual resources that can be restricted (TO-DO).
+```
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: object-quota-demo
+spec:
+  hard:
+    persistentvolumeclaims: "1"
+    services.loadbalancers: "2"
+    services.nodeports: "0"
+```
 ### Configuring 'Out Of Resource' Handling
 I imagine this will be on the exam too, good walk-thru. 
 [Configure Out of Resource Handling](https://kubernetes.io/docs/tasks/administer-cluster/out-of-resource/)
@@ -45,11 +69,12 @@ I imagine this will be on the exam too, good walk-thru.
 This is probably on the exam, and this provides a good walk-thru.
 [A Custom Scheduler](https://kubernetes.io/docs/tasks/administer-cluster/configure-multiple-schedulers/)
 
+### Node CPU Management Policies
+This is a good read on how cpu resources are managed. 
+[Configuring Node CPU Management Policies](https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/)
 
 
-### Autoscaling DNS Service
-This is an example of using node parameters to auto scale resources, such as the DNS service in this example.
-[DNS Autoscaling](https://kubernetes.io/docs/tasks/administer-cluster/dns-horizontal-autoscaling/)
+
 
 ### Reclaim Policy for PVs
 [Changing the Reclaim Policy](https://kubernetes.io/docs/tasks/administer-cluster/change-pv-reclaim-policy/)
