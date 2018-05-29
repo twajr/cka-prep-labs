@@ -75,8 +75,7 @@ This is a component that allows cloud-specific control loops. It can be maintain
 - [Fine Parallel Processsing with a Work Queue](https://kubernetes.io/docs/tasks/job/fine-parallel-processing-work-queue/)
 
 ## Pods and Containers
-### Assigning CPU and Mem Resources
-Details on assigning resources at the 'Pod' object level.
+
 - [Memory](https://kubernetes.io/docs/tasks/configure-pod-container/assign-memory-resource/)
 - [CPU](https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource/)
 - [QOS](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/)
@@ -111,10 +110,11 @@ Details on assigning resources at the 'Pod' object level.
 - [Securing a Cluster](https://kubernetes.io/docs/tasks/administer-cluster/securing-a-cluster/)
 - [Managing Sysctls](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/)
 - [Manage Cluster TLS Certificates](https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/)
+- [Encryption at Rest](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/)
 
 ## Deployments, Replica Sets, and Stateful Sets, DaemonSets
 - [Deployments Lab](https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/)
-- [Single Instance Stateful (MySQL)]()https://kubernetes.io/docs/tasks/run-application/run-single-instance-stateful-application/
+- [Single Instance Stateful (MySQL)](https://kubernetes.io/docs/tasks/run-application/run-single-instance-stateful-application/)
 - [Replicated Stateful (MySQL)](https://kubernetes.io/docs/tasks/run-application/run-replicated-stateful-application/)
 - [DaemonSet Rolling Update](https://kubernetes.io/docs/tasks/manage-daemon/update-daemon-set/)
 - [Static Pods](https://kubernetes.io/docs/tasks/administer-cluster/static-pod/) - Better to use Daemon sets today
@@ -129,7 +129,7 @@ Details on assigning resources at the 'Pod' object level.
 - [Configuring Mem/CPU Quotas](https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/quota-memory-cpu-namespace/)
 - [Congiguring Pod-Specific Quotas](https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/quota-pod-namespace/)
 
-### Configure Quotas for API Objects
+#### Configure Quotas for API Objects
 Quotas are used to restrict the number of items that can be created. It would be nice to have a list of actual resources that can be restricted (TO-DO).
 ```
 apiVersion: v1
@@ -142,11 +142,11 @@ spec:
     services.loadbalancers: "2"
     services.nodeports: "0"
 ```
-### Configuring 'Out Of Resource' Handling
+#### Configuring 'Out Of Resource' Handling
 I imagine this will be on the exam too, good walk-thru. 
 [Configure Out of Resource Handling](https://kubernetes.io/docs/tasks/administer-cluster/out-of-resource/)
 
-### [Reserve Compute Resources](https://kubernetes.io/docs/tasks/administer-cluster/reserve-compute-resources/)
+#### [Reserve Compute Resources](https://kubernetes.io/docs/tasks/administer-cluster/reserve-compute-resources/)
 This allows you to ensure system daemons have the compute resources they need. 
 
 ## DNS
@@ -156,18 +156,15 @@ This allows you to ensure system daemons have the compute resources they need.
 
 ## Networking
 - [Declare Network Policy](https://kubernetes.io/docs/tasks/administer-cluster/declare-network-policy/)
-### IP Masquerade
+
+#### IP Masquerade
 This is used to hide a pods IP address behind that of the Node's IP address. This is necessary when a well-known IP is needed at the receiving end. 
 [IP Masquerade](https://kubernetes.io/docs/tasks/administer-cluster/ip-masq-agent/)
 
-## Encryption / Secrets
-[Encryption at Rest](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/)
-
 ## Scheduling
-### Configuring Multiple Schedulers
+#### Configuring Multiple Schedulers
 This is probably on the exam, and this provides a good walk-thru.
 [A Custom Scheduler](https://kubernetes.io/docs/tasks/administer-cluster/configure-multiple-schedulers/)
-
 
 ## Storage
 - [Using a Shared Volume for Communication](https://kubernetes.io/docs/tasks/access-application-cluster/communicate-containers-same-pod-shared-volume/)
