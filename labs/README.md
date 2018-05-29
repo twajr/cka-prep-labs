@@ -26,6 +26,10 @@ My goal is to have a way to really 'practice' for the exam on my Raspberry Pi cl
 We first need a cluster and kubectl. To ensure kubectl is installed, read through the first item. Use of the kubectl proxy to experiment with the API is easy and instructional. 
 
 - [Install Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+- [Accessing Multiple Clusters](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/)
+- [Accessing Cluster with API](https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster/)
+- [Port Forwarding](https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/)
+- [Listing Cluster Containers](https://kubernetes.io/docs/tasks/access-application-cluster/list-all-running-container-images/)
 - [Patching API Objects In-Place](https://kubernetes.io/docs/tasks/run-application/update-api-object-kubectl-patch/)
 - [Scaling a Stateful Set](https://kubernetes.io/docs/tasks/run-application/scale-stateful-set/)
 - [Deleting Stateful Sets](https://kubernetes.io/docs/tasks/run-application/delete-stateful-set/)
@@ -57,7 +61,18 @@ You can add user-defined 'resources' to your K8s nodes with the HTTP PATCH reque
 ### [Static Pods](https://kubernetes.io/docs/tasks/administer-cluster/static-pod/)
 Better to use Daemon sets today
 
+## CRON
+- [Automated Tasks with Cron Jobs](https://kubernetes.io/docs/tasks/job/automated-tasks-with-cron-jobs/)
+- [Parallel Jobs with Expansions](https://kubernetes.io/docs/tasks/job/parallel-processing-expansion/)
+- [Course Parallel Processing with a Work Queue](https://kubernetes.io/docs/tasks/job/coarse-parallel-processing-work-queue/)
+- [Fine Parallel Processsing with a Work Queue](https://kubernetes.io/docs/tasks/job/fine-parallel-processing-work-queue/)
+
 ## Services
+- [Load Balancing with Services](https://kubernetes.io/docs/tasks/access-application-cluster/load-balance-access-application-cluster/)
+- [Service Basics](https://kubernetes.io/docs/tasks/access-application-cluster/service-access-application-cluster/)
+- [Front-end to Back-end](https://kubernetes.io/docs/tasks/access-application-cluster/connecting-frontend-backend/)
+- [External Load Balancer](https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/)
+- []
 
 ## Security
 ### [Securing a Cluster](https://kubernetes.io/docs/tasks/administer-cluster/securing-a-cluster/)
@@ -162,19 +177,13 @@ This is a component that allows cloud-specific control loops. It can be maintain
 This is used to hide a pods IP address behind that of the Node's IP address. This is necessary when a well-known IP is needed at the receiving end. 
 [IP Masquerade](https://kubernetes.io/docs/tasks/administer-cluster/ip-masq-agent/)
 
-
 ## Storage
-### PVC Protection
+- [Using a Shared Volume for Communication](https://kubernetes.io/docs/tasks/access-application-cluster/communicate-containers-same-pod-shared-volume/)
 As of 1.9, PVCs that are active can be protected from removal. 
-[PVC Protection](https://kubernetes.io/docs/tasks/administer-cluster/pvc-protection/)
-### Limit Storage Consumption
-[Limit ranges on PVCs](https://kubernetes.io/docs/tasks/administer-cluster/limit-storage-consumption/)
-
-### Reclaim Policy for PVs
-[Changing the Reclaim Policy](https://kubernetes.io/docs/tasks/administer-cluster/change-pv-reclaim-policy/)
-
-### Change Default Storage Class
-[Changing the default storage class](https://kubernetes.io/docs/tasks/administer-cluster/change-default-storage-class/)
+- [PVC Protection](https://kubernetes.io/docs/tasks/administer-cluster/pvc-protection/)
+- [Limit ranges on PVCs](https://kubernetes.io/docs/tasks/administer-cluster/limit-storage-consumption/)
+- [Changing the Reclaim Policy](https://kubernetes.io/docs/tasks/administer-cluster/change-pv-reclaim-policy/)
+- [Changing the default storage class](https://kubernetes.io/docs/tasks/administer-cluster/change-default-storage-class/)
 
 ## Kubeadm
 
