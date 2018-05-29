@@ -46,7 +46,7 @@ Draining nodes with the eviction API instead of the node drain command
 [Dynamic Kubelet Configuration](https://kubernetes.io/docs/tasks/administer-cluster/reconfigure-kubelet/)
 
 ### Extended Node Resources
-You can add user-defined 'resources' to your K8s nodes with the HTTP PATCH request. This is really pretty neat and shows out extendable K8s is. 
+You can add user-defined 'resources' to your K8s nodes with the HTTP PATCH request. This is really pretty neat and shows how extendable K8s is. This is then used in pod creation. (see pod section)
 [Extended Node Resources](https://kubernetes.io/docs/tasks/administer-cluster/extended-resource-node/)
 
 ### [Static Pods](https://kubernetes.io/docs/tasks/administer-cluster/static-pod/)
@@ -62,9 +62,24 @@ Sysctls can be disabled or enabled explicitly
 ## Pods and Containers
 ### Assigning CPU and Mem Resources
 Details on assigning resources at the 'Pod' object level.
-  - [Memory](https://kubernetes.io/docs/tasks/configure-pod-container/assign-memory-resource/)
-  - [CPU](https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource/)
-  - [QOS](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/)
+- [Memory](https://kubernetes.io/docs/tasks/configure-pod-container/assign-memory-resource/)
+- [CPU](https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource/)
+- [QOS](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/)
+- [Extended Resources](https://kubernetes.io/docs/tasks/configure-pod-container/extended-resource/)
+- [EmtpyDir Volume](https://kubernetes.io/docs/tasks/configure-pod-container/configure-volume-storage/)
+- [Persistent Volume](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/)
+- [Project Volume w/Secrets](https://kubernetes.io/docs/tasks/configure-pod-container/configure-projected-volume-storage/)
+- [Security Contexts](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
+- [Setting Service Account](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
+- [Pulling from a Private Repo](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/)
+- [Liveliness and Readiness Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/)
+- [Assigning to Specific Nodes](https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes/)
+- [Init Containers](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-initialization/)
+- [Hook to Lifecyle Events](https://kubernetes.io/docs/tasks/configure-pod-container/attach-handler-lifecycle-event/)
+- [Using ConfigMaps](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/)
+- [Sharing Process Namespace](https://kubernetes.io/docs/tasks/configure-pod-container/share-process-namespace/)
+- [Using Kompose to Covert Docker Compose Files](https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/)
+
 
 ## Namespaces / Quotas
 - [Namespace Basics](https://kubernetes.io/docs/tasks/administer-cluster/namespaces-walkthrough/)
@@ -78,8 +93,7 @@ Details on assigning resources at the 'Pod' object level.
 
 
 ## Etcd
-### Etcd Basics
-[Operating Etcd](https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/)
+- Etcd Basics [Operating Etcd](https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/)
 
 ## DNS
 ### Customizing DNS Services
