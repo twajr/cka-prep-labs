@@ -21,7 +21,6 @@ My goal is to have a way to really 'practice' for the exam on my Raspberry Pi cl
 - [ ] Namespaces / Quotas
 - [ ] Scheduling
 - [ ] Monitoring, Logging, and Debugging
-- [ ] KubeAdm
 
 ## Kubectl
 We first need a cluster and kubectl. To ensure kubectl is installed, read through the first item. Use of the kubectl proxy to experiment with the API is easy and instructional. 
@@ -186,5 +185,4 @@ As of 1.9, PVCs that are active can be protected from removal.
 - [Troubleshooting Applications](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-application/)
 - [Troubleshooting Clusters](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-cluster/)
 
-## Kubeadm
-- [Using KubeAdm HA Etcd Cluster](https://kubernetes.io/docs/tasks/administer-cluster/setup-ha-etcd-with-kubeadm/)
+

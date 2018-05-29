@@ -1,29 +1,23 @@
 # Current Progress
-The list below is based on the curriculum 1.9
+The list below is based on the curriculum 1.10
 
-- [ ] Core Concepts
+- [ ] Core Concepts - 19%
   - [ ] API Primitives
   - [ ] Cluster Architecture
   - [ ] Services and Network Primitives
-- [ ] Scheduling
-  - [ ] Label Selectors
-  - [ ] Deamon Sets
-  - [ ] Resource Limits Effect
-  - [ ] Multiple Schedulers
-  - [ ] Manually Scheduling Pods
-  - [ ] Display Scheduler Events
-  - [ ] Configure K8s Scheduler 
-- [ ] Cluster Maintenance
-  - [ ] Upgrade process
-  - [ ] Facilitate OS upgrades
-  - [ ] Backup and Restore methodologies
-- [ ] Storage
-  - [ ] Persistent Volumes
-  - [ ] Access Modes
-  - [ ] PVC Primitives
-  - [ ] Storage Objects
-  - [ ] Configuration Apps with Storage
-- [ ] Security
+- [ ] Installation, Configuration and Validation - 12%
+  - [ ] Design a cluster
+  - [ ] Install masters and nodes
+  - [ ] Secure cluster communications
+  - [ ] Configure High Availability
+  - [ ] Where to get K8s Release Binaries
+  - [ ] Provision underlying infrastructure
+  - [ ] Choose a network solution
+  - [ ] Choose Infrastructure Configuration
+  - [ ] End-to-End Test on the Cluster
+  - [ ] Analyse end-to-end tests
+  - [ ] Run node end-to-end tests
+- [ ] Security - 12%
   - [ ] Configure AuthN / AuthZ
   - [ ] Security Primitives
   - [ ] Configure Network Policies
@@ -32,28 +26,44 @@ The list below is based on the curriculum 1.9
   - [ ] Security Contexts
   - [ ] Secure Etcd
   - [ ] Work with RBAC options
-- [ ] Application Lifecycle Management
-  - [ ] Understand deployments / rolling updates and rollbacks
-  - [ ] Configuring applications
-  - [ ] How to scale applications
-  - [ ] Primitives used for self-healing applications
-- [ ] Troubleshooting
-  - [ ] Application Failure
-  - [ ] Control Plan Failure
-  - [ ] Worker Node Failure
-  - [ ] Networking Issues
-- [ ] Monitoring, Logging, and Debugging
-  - [ ] Monitoring of all cluster components
-  - [ ] Monitoring Applications
-  - [ ] Manage component logs
-  - [ ] Manage application logs
-- [ ] Networking
+- [ ] Cluster Maintenance - 11%
+  - [ ] Upgrade process
+  - [ ] Facilitate OS upgrades
+  - [ ] Backup and Restore methodologies
+- [ ] Networking - 11%
   - [ ] Networking configuration for cluster nodes
   - [ ] Pod networking concepts
   - [ ] Understand Service Networking
   - [ ] Deploy and configure load balancers
   - [ ] How to use ingress rules
-  - [ ] Configure and user cluster DNS
+  - [ ] Configure and use cluster DNS
   - [ ] Understand CNI
-- [ ] Installation, Configuration and Validation
-  - [ ] Design a cluster
+- [ ] Application Lifecycle Management - 8%
+  - [ ] Understand deployments / rolling updates and rollbacks
+  - [ ] Configuring applications
+  - [ ] How to scale applications
+  - [ ] Primitives used for self-healing applications
+- [ ] Troubleshooting 10%
+  - [ ] Application Failure
+  - [ ] Control Plan Failure
+  - [ ] Worker Node Failure
+  - [ ] Networking Issues
+- [ ] Storage - 7%
+  - [ ] Persistent Volumes
+  - [ ] Access Modes
+  - [ ] PVC Primitives
+  - [ ] Storage Objects
+  - [ ] Configuration Apps with Storage
+- [ ] Monitoring, Logging, and Debugging - 5%
+  - [ ] Monitoring of all cluster components
+  - [ ] Monitoring Applications
+  - [ ] Manage component logs
+  - [ ] Manage application logs
+- [ ] Scheduling - 5%
+  - [ ] Label Selectors
+  - [ ] Deamon Sets
+  - [ ] Resource Limits Effect
+  - [ ] Multiple Schedulers
+  - [ ] Manually Scheduling Pods
+  - [ ] Display Scheduler Events
+  - [ ] Configure K8s Scheduler 
