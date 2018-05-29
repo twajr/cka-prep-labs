@@ -23,13 +23,18 @@ My goal is to have a way to really 'practice' for the exam on my Raspberry Pi cl
 - [ ] Monitoring, Logging, and Debugging
 
 ## Kubectl
-We first need a cluster and kubectl. To ensure kubectl is installed, read through the following:
-[Install Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+We first need a cluster and kubectl. To ensure kubectl is installed, read through the first item. Use of the kubectl proxy to experiment with the API is easy and instructional. 
 
-Use of the kubectl proxy to experiment with the API is easy and instructional. 
-
-### Kubectl Exec
-kubectl exec is nearly the same as Docker Exec and allows you to connect to other nodes, pods, and services. 
+- [Install Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+- [Patching API Objects In-Place](https://kubernetes.io/docs/tasks/run-application/update-api-object-kubectl-patch/)
+- [Scaling a Stateful Set](https://kubernetes.io/docs/tasks/run-application/scale-stateful-set/)
+- [Deleting Stateful Sets](https://kubernetes.io/docs/tasks/run-application/delete-stateful-set/)
+- [Stateful Pods - Forced Deletion](https://kubernetes.io/docs/tasks/run-application/force-delete-stateful-set-pod/)
+- [ReplicaSet Rolling Updates](https://kubernetes.io/docs/tasks/run-application/rolling-update-replication-controller/)
+- [Horizontal Autoscaling](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)
+- [Autoscaling Lab](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/)
+- [Pod Disruption Budgets](https://kubernetes.io/docs/tasks/run-application/configure-pdb/)
+- Need lab for Kubectl EXEC
 
 ## Cluster Management
 ### Rebooting a Node (drain)
@@ -79,7 +84,17 @@ Details on assigning resources at the 'Pod' object level.
 - [Using ConfigMaps](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/)
 - [Sharing Process Namespace](https://kubernetes.io/docs/tasks/configure-pod-container/share-process-namespace/)
 - [Using Kompose to Covert Docker Compose Files](https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/)
+- [Container Commands and Arguments](https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/)
+- [Using the Downward API](https://kubernetes.io/docs/tasks/inject-data-application/environment-variable-expose-pod-information/)
+- [Downward API via a Volume](https://kubernetes.io/docs/tasks/inject-data-application/downward-api-volume-expose-pod-information/)
+- [Credentials using Secrets](https://kubernetes.io/docs/tasks/inject-data-application/distribute-credentials-secure/)
+- [Pod Preset Injection](https://kubernetes.io/docs/tasks/inject-data-application/podpreset/)
 
+## Deployments, Replica Sets, and Stateful Sets
+- [Deployments Lab](https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/)
+- [Single Instance Stateful (MySQL)]()https://kubernetes.io/docs/tasks/run-application/run-single-instance-stateful-application/
+- [Replicated Stateful (MySQL)](https://kubernetes.io/docs/tasks/run-application/run-replicated-stateful-application/)
+- []
 
 ## Namespaces / Quotas
 - [Namespace Basics](https://kubernetes.io/docs/tasks/administer-cluster/namespaces-walkthrough/)
