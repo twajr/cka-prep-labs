@@ -62,19 +62,19 @@ Sysctls can be disabled or enabled explicitly
 ## Pods and Containers
 ### Assigning CPU and Mem Resources
 Details on assigning resources at the 'Pod' object level.
-[Memory](https://kubernetes.io/docs/tasks/configure-pod-container/assign-memory-resource/)
-[CPU](https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource/)
-[QOS](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/)
+  - [Memory](https://kubernetes.io/docs/tasks/configure-pod-container/assign-memory-resource/)
+  - [CPU](https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource/)
+  - [QOS](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/)
 
 ## Namespaces / Quotas
-[Namespace Basics](https://kubernetes.io/docs/tasks/administer-cluster/namespaces-walkthrough/)
-[More namespace Basics](https://kubernetes.io/docs/tasks/administer-cluster/namespaces/)
-[Configuring Default Mem Limits](https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/)
-[Configuring Default CPU Limits](https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-default-namespace/)
-[Configuring Min/Max Mem Limits](https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-constraint-namespace/)
-[Configuring Min/Max CPU Limits](https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-constraint-namespace/)
-[Configuring Mem/CPU Quotas](https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/quota-memory-cpu-namespace/)
-[Congiguring Pod-Specific Quotas](https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/quota-pod-namespace/)
+- [Namespace Basics](https://kubernetes.io/docs/tasks/administer-cluster/namespaces-walkthrough/)
+- [More namespace Basics](https://kubernetes.io/docs/tasks/administer-cluster/namespaces/)
+- [Configuring Default Mem Limits](https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/)
+- [Configuring Default CPU Limits](https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-default-namespace/)
+- [Configuring Min/Max Mem Limits](https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-constraint-namespace/)
+- [Configuring Min/Max CPU Limits](https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-constraint-namespace/)
+- [Configuring Mem/CPU Quotas](https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/quota-memory-cpu-namespace/)
+- [Congiguring Pod-Specific Quotas](https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/quota-pod-namespace/)
 
 
 ## Etcd
