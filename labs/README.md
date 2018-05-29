@@ -9,18 +9,19 @@ ALSO, I have ordered the labs in what I think is an order of importance / releva
 
 My goal is to have a way to really 'practice' for the exam on my Raspberry Pi cluster. It is a small cluster that I can carry with me to work and has one master and two worker nodes. 
 ### Progress
-- [x] Basics
-  - [x] Kubectl
+- [ ] Kubectl
 - [ ] Cluster Management
+- [ ] Cron / Jobs
 - [ ] Pods and Containers
-- [ ] Storage
+- [ ] Services
 - [ ] Security
+- [ ] Storage
 - [ ] Networking
-- [x] Namespaces
 - [ ] DNS
-- [ ] Quotas
-- [ ] Troubleshooting
+- [ ] Namespaces / Quotas
+- [ ] Scheduling
 - [ ] Monitoring, Logging, and Debugging
+- [ ] KubeAdm
 
 ## Kubectl
 We first need a cluster and kubectl. To ensure kubectl is installed, read through the first item. Use of the kubectl proxy to experiment with the API is easy and instructional. 
@@ -54,32 +55,24 @@ Draining nodes with the eviction API instead of the node drain command
 - [Auditing](https://kubernetes.io/docs/tasks/debug-application-cluster/audit/)
 - [Troubleshooting Clusters](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-cluster/)
 
-
 ### Extended Node Resources
 You can add user-defined 'resources' to your K8s nodes with the HTTP PATCH request. This is really pretty neat and shows how extendable K8s is. This is then used in pod creation. (see pod section)
-[Extended Node Resources](https://kubernetes.io/docs/tasks/administer-cluster/extended-resource-node/)
+- [Extended Node Resources](https://kubernetes.io/docs/tasks/administer-cluster/extended-resource-node/)
 
-### [Static Pods](https://kubernetes.io/docs/tasks/administer-cluster/static-pod/)
-Better to use Daemon sets today
+### Etcd
+- Etcd Basics [Operating Etcd](https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/)
+### Node CPU Management Policies
+This is a good read on how cpu resources are managed. 
+[Configuring Node CPU Management Policies](https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/)
+
+### [Cloud-Controller-Manager](https://kubernetes.io/docs/tasks/administer-cluster/running-cloud-controller/)
+This is a component that allows cloud-specific control loops. It can be maintained by the cloud providers. 
 
 ## CRON
 - [Automated Tasks with Cron Jobs](https://kubernetes.io/docs/tasks/job/automated-tasks-with-cron-jobs/)
 - [Parallel Jobs with Expansions](https://kubernetes.io/docs/tasks/job/parallel-processing-expansion/)
 - [Course Parallel Processing with a Work Queue](https://kubernetes.io/docs/tasks/job/coarse-parallel-processing-work-queue/)
 - [Fine Parallel Processsing with a Work Queue](https://kubernetes.io/docs/tasks/job/fine-parallel-processing-work-queue/)
-
-## Services
-- [Load Balancing with Services](https://kubernetes.io/docs/tasks/access-application-cluster/load-balance-access-application-cluster/)
-- [Service Basics](https://kubernetes.io/docs/tasks/access-application-cluster/service-access-application-cluster/)
-- [Front-end to Back-end](https://kubernetes.io/docs/tasks/access-application-cluster/connecting-frontend-backend/)
-- [External Load Balancer](https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/)
-- [Debugging Services](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-service/)
-- []
-
-## Security
-- [Securing a Cluster](https://kubernetes.io/docs/tasks/administer-cluster/securing-a-cluster/)
-- [Managing Sysctls](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/)
-- [Manage Cluster TLS Certificates](https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/)
 
 ## Pods and Containers
 ### Assigning CPU and Mem Resources
@@ -107,11 +100,24 @@ Details on assigning resources at the 'Pod' object level.
 - [Credentials using Secrets](https://kubernetes.io/docs/tasks/inject-data-application/distribute-credentials-secure/)
 - [Pod Preset Injection](https://kubernetes.io/docs/tasks/inject-data-application/podpreset/)
 
-## Deployments, Replica Sets, and Stateful Sets
+## Services
+- [Load Balancing with Services](https://kubernetes.io/docs/tasks/access-application-cluster/load-balance-access-application-cluster/)
+- [Service Basics](https://kubernetes.io/docs/tasks/access-application-cluster/service-access-application-cluster/)
+- [Front-end to Back-end](https://kubernetes.io/docs/tasks/access-application-cluster/connecting-frontend-backend/)
+- [External Load Balancer](https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/)
+- [Debugging Services](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-service/)
+
+## Security
+- [Securing a Cluster](https://kubernetes.io/docs/tasks/administer-cluster/securing-a-cluster/)
+- [Managing Sysctls](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/)
+- [Manage Cluster TLS Certificates](https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/)
+
+## Deployments, Replica Sets, and Stateful Sets, DaemonSets
 - [Deployments Lab](https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/)
 - [Single Instance Stateful (MySQL)]()https://kubernetes.io/docs/tasks/run-application/run-single-instance-stateful-application/
 - [Replicated Stateful (MySQL)](https://kubernetes.io/docs/tasks/run-application/run-replicated-stateful-application/)
-- []
+- [DaemonSet Rolling Update](https://kubernetes.io/docs/tasks/manage-daemon/update-daemon-set/)
+- [Static Pods](https://kubernetes.io/docs/tasks/administer-cluster/static-pod/) - Better to use Daemon sets today
 
 ## Namespaces / Quotas
 - [Namespace Basics](https://kubernetes.io/docs/tasks/administer-cluster/namespaces-walkthrough/)
@@ -122,21 +128,6 @@ Details on assigning resources at the 'Pod' object level.
 - [Configuring Min/Max CPU Limits](https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-constraint-namespace/)
 - [Configuring Mem/CPU Quotas](https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/quota-memory-cpu-namespace/)
 - [Congiguring Pod-Specific Quotas](https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/quota-pod-namespace/)
-
-
-## Etcd
-- Etcd Basics [Operating Etcd](https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/)
-
-## DNS
-### Customizing DNS Services
-Lots of options...
-[Customizing DNS Nameservers](https://kubernetes.io/docs/tasks/administer-cluster/dns-custom-nameservers/)
-### Debugging DNS Resolution
-[Debugging DNS](https://kubernetes.io/docs/tasks/administer-cluster/dns-debugging-resolution/)
-### Autoscaling DNS Service
-This is an example of using node parameters to auto scale resources, such as the DNS service in this example.
-[DNS Autoscaling](https://kubernetes.io/docs/tasks/administer-cluster/dns-horizontal-autoscaling/)
-
 
 ### Configure Quotas for API Objects
 Quotas are used to restrict the number of items that can be created. It would be nice to have a list of actual resources that can be restricted (TO-DO).
@@ -155,29 +146,28 @@ spec:
 I imagine this will be on the exam too, good walk-thru. 
 [Configure Out of Resource Handling](https://kubernetes.io/docs/tasks/administer-cluster/out-of-resource/)
 
-## Network Policy
-[Declare](https://kubernetes.io/docs/tasks/administer-cluster/declare-network-policy/)
+### [Reserve Compute Resources](https://kubernetes.io/docs/tasks/administer-cluster/reserve-compute-resources/)
+This allows you to ensure system daemons have the compute resources they need. 
+
+## DNS
+- [Customizing DNS Nameservers](https://kubernetes.io/docs/tasks/administer-cluster/dns-custom-nameservers/)
+- [DNS Autoscaling Example](https://kubernetes.io/docs/tasks/administer-cluster/dns-horizontal-autoscaling/)
+- [Debugging DNS](https://kubernetes.io/docs/tasks/administer-cluster/dns-debugging-resolution/)
+
+## Networking
+- [Declare Network Policy](https://kubernetes.io/docs/tasks/administer-cluster/declare-network-policy/)
+### IP Masquerade
+This is used to hide a pods IP address behind that of the Node's IP address. This is necessary when a well-known IP is needed at the receiving end. 
+[IP Masquerade](https://kubernetes.io/docs/tasks/administer-cluster/ip-masq-agent/)
 
 ## Encryption / Secrets
 [Encryption at Rest](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/)
 
-### [Reserve Compute Resources](https://kubernetes.io/docs/tasks/administer-cluster/reserve-compute-resources/)
-This allows you to ensure system daemons have the compute resources they need. 
-
+## Scheduling
 ### Configuring Multiple Schedulers
 This is probably on the exam, and this provides a good walk-thru.
 [A Custom Scheduler](https://kubernetes.io/docs/tasks/administer-cluster/configure-multiple-schedulers/)
 
-### Node CPU Management Policies
-This is a good read on how cpu resources are managed. 
-[Configuring Node CPU Management Policies](https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/)
-
-### [Cloud-Controller-Manager](https://kubernetes.io/docs/tasks/administer-cluster/running-cloud-controller/)
-This is a component that allows cloud-specific control loops. It can be maintained by the cloud providers. 
-
-### IP Masquerade
-This is used to hide a pods IP address behind that of the Node's IP address. This is necessary when a well-known IP is needed at the receiving end. 
-[IP Masquerade](https://kubernetes.io/docs/tasks/administer-cluster/ip-masq-agent/)
 
 ## Storage
 - [Using a Shared Volume for Communication](https://kubernetes.io/docs/tasks/access-application-cluster/communicate-containers-same-pod-shared-volume/)
@@ -187,7 +177,7 @@ As of 1.9, PVCs that are active can be protected from removal.
 - [Changing the Reclaim Policy](https://kubernetes.io/docs/tasks/administer-cluster/change-pv-reclaim-policy/)
 - [Changing the default storage class](https://kubernetes.io/docs/tasks/administer-cluster/change-default-storage-class/)
 
-## Debugging
+## Monitoring, Logging, Debugging
 - [Telepresense?](https://www.telepresence.io/discussion/overview)
 - [App Introspection and Debugging](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-application-introspection/)
 - [Metrics API](https://kubernetes.io/docs/tasks/debug-application-cluster/core-metrics-pipeline/)
@@ -199,5 +189,4 @@ As of 1.9, PVCs that are active can be protected from removal.
 - [Troubleshooting Clusters](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-cluster/)
 
 ## Kubeadm
-
-### [Using KubeAdm HA Etcd Cluster](https://kubernetes.io/docs/tasks/administer-cluster/setup-ha-etcd-with-kubeadm/)
+- [Using KubeAdm HA Etcd Cluster](https://kubernetes.io/docs/tasks/administer-cluster/setup-ha-etcd-with-kubeadm/)
