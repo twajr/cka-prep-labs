@@ -29,6 +29,7 @@ We first need a cluster and kubectl. To ensure kubectl is installed, read throug
 - [Accessing Multiple Clusters](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/)
 - [Accessing Cluster with API](https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster/)
 - [Port Forwarding](https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/)
+- [Shell to Running Container (exec)](https://kubernetes.io/docs/tasks/debug-application-cluster/get-shell-running-container/)
 - [Listing Cluster Containers](https://kubernetes.io/docs/tasks/access-application-cluster/list-all-running-container-images/)
 - [Patching API Objects In-Place](https://kubernetes.io/docs/tasks/run-application/update-api-object-kubectl-patch/)
 - [Scaling a Stateful Set](https://kubernetes.io/docs/tasks/run-application/scale-stateful-set/)
@@ -38,7 +39,6 @@ We first need a cluster and kubectl. To ensure kubectl is installed, read throug
 - [Horizontal Autoscaling](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)
 - [Autoscaling Lab](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/)
 - [Pod Disruption Budgets](https://kubernetes.io/docs/tasks/run-application/configure-pdb/)
-- Need lab for Kubectl EXEC
 
 ## Cluster Management
 ### Rebooting a Node (drain)
@@ -48,11 +48,12 @@ Given pods are typically replicated on several nodes, there's no need to worry a
     kubectl uncordon mynode
 ```
 The uncordon command reenables scheduling. 
-### [Eviction API](https://kubernetes.io/docs/tasks/administer-cluster/safely-drain-node/)
+- [Eviction API](https://kubernetes.io/docs/tasks/administer-cluster/safely-drain-node/)
 Draining nodes with the eviction API instead of the node drain command
+- [Dynamic Kubelet Configuration](https://kubernetes.io/docs/tasks/administer-cluster/reconfigure-kubelet/)
+- [Auditing](https://kubernetes.io/docs/tasks/debug-application-cluster/audit/)
+- [Troubleshooting Clusters](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-cluster/)
 
-### Reconfigure Live Kubelet
-[Dynamic Kubelet Configuration](https://kubernetes.io/docs/tasks/administer-cluster/reconfigure-kubelet/)
 
 ### Extended Node Resources
 You can add user-defined 'resources' to your K8s nodes with the HTTP PATCH request. This is really pretty neat and shows how extendable K8s is. This is then used in pod creation. (see pod section)
@@ -72,12 +73,13 @@ Better to use Daemon sets today
 - [Service Basics](https://kubernetes.io/docs/tasks/access-application-cluster/service-access-application-cluster/)
 - [Front-end to Back-end](https://kubernetes.io/docs/tasks/access-application-cluster/connecting-frontend-backend/)
 - [External Load Balancer](https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/)
+- [Debugging Services](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-service/)
 - []
 
 ## Security
-### [Securing a Cluster](https://kubernetes.io/docs/tasks/administer-cluster/securing-a-cluster/)
-### [Managing Sysctls](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/)
-Sysctls can be disabled or enabled explicitly
+- [Securing a Cluster](https://kubernetes.io/docs/tasks/administer-cluster/securing-a-cluster/)
+- [Managing Sysctls](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/)
+- [Manage Cluster TLS Certificates](https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/)
 
 ## Pods and Containers
 ### Assigning CPU and Mem Resources
@@ -184,6 +186,17 @@ As of 1.9, PVCs that are active can be protected from removal.
 - [Limit ranges on PVCs](https://kubernetes.io/docs/tasks/administer-cluster/limit-storage-consumption/)
 - [Changing the Reclaim Policy](https://kubernetes.io/docs/tasks/administer-cluster/change-pv-reclaim-policy/)
 - [Changing the default storage class](https://kubernetes.io/docs/tasks/administer-cluster/change-default-storage-class/)
+
+## Debugging
+- [Telepresense?](https://www.telepresence.io/discussion/overview)
+- [App Introspection and Debugging](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-application-introspection/)
+- [Metrics API](https://kubernetes.io/docs/tasks/debug-application-cluster/core-metrics-pipeline/)
+- [Debugging Init Containers](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-init-containers/)
+- [Debugging Pods and RCs](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-pod-replication-controller/)
+- [Debugging Services](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-service/)
+- [Debugging Services Locally](https://kubernetes.io/docs/tasks/debug-application-cluster/local-debugging/)
+- [Troubleshooting Applications](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-application/)
+- [Troubleshooting Clusters](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-cluster/)
 
 ## Kubeadm
 
