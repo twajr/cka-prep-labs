@@ -42,7 +42,7 @@ We first need a cluster and kubectl. To ensure kubectl is installed, read throug
 - [Pod Disruption Budgets](https://kubernetes.io/docs/tasks/run-application/configure-pdb/)
 
 ## Cluster Management
-### Rebooting a Node (drain)
+#### Rebooting a Node (drain)
 Given pods are typically replicated on several nodes, there's no need to worry about a specific node reboot as they will be restarted by kubectl on restart. However, to be specific about it, you can use drain to gracefully terminate pods before a reboot as well as ensuring new pods are not scheduled there. 
 ```
     kubectl drain mynode
@@ -55,17 +55,18 @@ Draining nodes with the eviction API instead of the node drain command
 - [Auditing](https://kubernetes.io/docs/tasks/debug-application-cluster/audit/)
 - [Troubleshooting Clusters](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-cluster/)
 
-### Extended Node Resources
+#### Extended Node Resources
 You can add user-defined 'resources' to your K8s nodes with the HTTP PATCH request. This is really pretty neat and shows how extendable K8s is. This is then used in pod creation. (see pod section)
 - [Extended Node Resources](https://kubernetes.io/docs/tasks/administer-cluster/extended-resource-node/)
 
-### Etcd
+#### Etcd
 - Etcd Basics [Operating Etcd](https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/)
-### Node CPU Management Policies
+
+#### Node CPU Management Policies
 This is a good read on how cpu resources are managed. 
 [Configuring Node CPU Management Policies](https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/)
 
-### [Cloud-Controller-Manager](https://kubernetes.io/docs/tasks/administer-cluster/running-cloud-controller/)
+#### [Cloud-Controller-Manager](https://kubernetes.io/docs/tasks/administer-cluster/running-cloud-controller/)
 This is a component that allows cloud-specific control loops. It can be maintained by the cloud providers. 
 
 ## CRON
